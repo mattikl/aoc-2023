@@ -7,7 +7,6 @@ fn solve(data: &str) -> usize {
         let winning: Vec<&str> = packs.next().unwrap().split_ascii_whitespace().collect();
         let mine: Vec<&str> = packs.next().unwrap().split_ascii_whitespace().collect();
 
-        eprintln!("winning {:?} mine {:?}", winning, mine);
         let winning_numbers: Vec<u32> = mine
             .into_iter()
             .filter(|num| winning.contains(num))
